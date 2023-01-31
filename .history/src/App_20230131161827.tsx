@@ -5,7 +5,7 @@ import { Title, Wrapper } from './App.styled';
 
 const websiteTheme = {
   colors: {
-    primary: '#e6cfcf',
+    primary: '#caa',
   },
 };
 
