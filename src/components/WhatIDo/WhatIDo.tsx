@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, SectionTitle } from '../../App.styled';
+
 import {
   Abilities,
   Ability,

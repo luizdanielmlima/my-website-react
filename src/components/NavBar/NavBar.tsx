@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MyLogo from '../MyLogo/MyLogo';
+import MyLogo from '../MyLogo';
 import NavBarLinks from '../NavBarLinks';
 
 const Header = styled.header`
