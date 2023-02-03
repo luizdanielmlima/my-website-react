@@ -26,6 +26,14 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--tertiary-color);
+}
+
 a,
 h3 {
   color: var(--primary-color);

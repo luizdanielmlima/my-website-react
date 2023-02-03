@@ -8,8 +8,18 @@
 # testing
 /coverage
 
+# git
+.history/
+
 # production
 /build
+
+# typescript
+*.tsbuildinfo
+
+# IDE
+.vscode/
+
 
 # misc
 .DS_Store
