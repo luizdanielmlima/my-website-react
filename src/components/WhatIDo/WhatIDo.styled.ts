@@ -6,6 +6,7 @@ export const WhatIDoSection = styled(Section)`
   color: ${({ theme }) => theme.colors.dark};
   background-color: ${({ theme }) => theme.colors.secondary};
 `;
+
 export const WhatIDoTitle = styled(SectionTitle)`
   color: ${({ theme }) => theme.colors.dark};
 `;
