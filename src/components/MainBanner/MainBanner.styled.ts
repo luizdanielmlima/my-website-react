@@ -27,9 +27,9 @@ export const AreaFullName = styled.div`
   flex-direction: column;
   align-items: end;
   padding: 0 20px;
-  color: var(--dark-color);
-  border-left: 5px solid var(--dark-color);
-  border-bottom: 5px solid var(--dark-color);
+  color: ${({ theme }) => theme.colors.dark};
+  border-left: 5px solid ${({ theme }) => theme.colors.dark};
+  border-bottom: 5px solid ${({ theme }) => theme.colors.dark};
   justify-self: end;
 `;
 
@@ -41,14 +41,14 @@ export const Box1 = styled.div`
   width: 150px;
   margin: 20px;
   justify-self: end;
-  background-color: var(--primary-color);
+  background-color: ${({ theme }) => theme.colors.primary};
   -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 `;
 
 export const VLine = styled.div`
   width: 1em;
-  background-color: var(--dark-color);
+  background-color: ${({ theme }) => theme.colors.dark};
 `;
 
 export const AreaIAm = styled.div`
@@ -56,22 +56,22 @@ export const AreaIAm = styled.div`
   align-items: center;
   justify-items: center;
   margin: 20px;
-  color: var(--dark-color);
-  background-color: var(--secondary-color);
+  color: ${({ theme }) => theme.colors.dark};
+  background-color: ${({ theme }) => theme.colors.secondary};
   justify-self: start;
 `;
 
 export const AreaJob = styled.div`
   padding: 15px 25px;
   font-size: 2em;
-  color: var(--dark-color);
+  color: ${({ theme }) => theme.colors.dark};
 `;
 export const AreaIKnow = styled.div`
   font-size: 1.2em;
-  color: var(--dark-color);
+  color: ${({ theme }) => theme.colors.dark};
   padding: 10px;
   align-self: end;
-  border-bottom: 5px dotted var(--dark-color);
+  border-bottom: 5px dotted ${({ theme }) => theme.colors.dark};
 `;
 
 export const Abilities = styled.a`
