@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBar from '../../components/NavBar/NavBar';
-import { Title } from './Home.styled';
+import MainBanner from '../../components/MainBanner';
+import NavBar from '../../components/NavBar';
 
 const Home = () => {
   return (
     <>
       <NavBar></NavBar>
-      <Title>Hello World!</Title>
+      <MainBanner />
     </>
   );
 };
