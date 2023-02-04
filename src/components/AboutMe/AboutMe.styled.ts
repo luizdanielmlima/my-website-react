@@ -14,13 +14,22 @@ export const AboutMeSectionTitle = styled(SectionTitle)`
 export const AboutMeContent = styled.div`
   text-align: center;
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 2fr;
+  grid-template-columns: repeat(3, 1.5fr);
   grid-gap: 50px;
   justify-items: center;
   line-height: 2.5;
 
   ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+`;
+
+export const AboutItem = styled.div`
+  padding: 16px 8px;
+
+  h3 {
+    margin-bottom: 20px;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 

@@ -5,6 +5,7 @@ import {
   AboutMeContent,
   AboutMeSection,
   AboutMeSectionTitle,
+  AboutItem,
   SkillsIcons,
 } from './AboutMe.styled';
 import {
@@ -27,7 +28,7 @@ const AboutMe = () => {
         About Me
       </AboutMeSectionTitle>
       <AboutMeContent>
-        <div className="abt-item">
+        <AboutItem>
           <h3>Who I am</h3>
           <p>
             I'm an engineer who switched carreers many years ago. I
@@ -36,8 +37,8 @@ const AboutMe = () => {
             building things with thoughtful planning, hard work and
             creativity.
           </p>
-        </div>
-        <div className="abt-item">
+        </AboutItem>
+        <AboutItem>
           <h3>Some More Info</h3>
           <ul>
             <li>Happily married, father of a daughter</li>
@@ -60,8 +61,8 @@ const AboutMe = () => {
             </a>
             <li>Fluent English, learning French</li>
           </ul>
-        </div>
-        <div className="abt-item">
+        </AboutItem>
+        <AboutItem>
           <h3>Skills</h3>
           <AboutItemDoubleInfo>
             <ul>
@@ -119,7 +120,7 @@ const AboutMe = () => {
               </IconContext.Provider>
             </SkillsIcons>
           </AboutItemDoubleInfo>
-        </div>
+        </AboutItem>
       </AboutMeContent>
     </AboutMeSection>
   );
