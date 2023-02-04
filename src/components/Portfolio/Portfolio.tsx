@@ -10,12 +10,13 @@ import { portfolioCardsData } from './portfolioData';
 
 const Portfolio = () => {
   return (
-    <PortfolioSection>
+    <PortfolioSection id="portfolio">
       <PortfolioTitle>Portfolio</PortfolioTitle>
       <PortfolioContent>
         {portfolioCardsData.map((portfItem) => {
           return (
             <PortfolioCard
+              key={portfItem.title}
               title={portfItem.title}
               type={portfItem.type}
               description={portfItem.description}

@@ -15,7 +15,7 @@ import {
 
 const MainBanner = () => {
   return (
-    <BannerArea id="main">
+    <BannerArea id="banner">
       <Poster>
         <AreaFullName>
           <Name>Luiz</Name>
@@ -31,7 +31,7 @@ const MainBanner = () => {
             <li>angular</li>
             <li>ionic 4</li>
             <li>
-              <a href="#about">more...</a>
+              <a href="#whatido">more...</a>
             </li>
           </Abilities>
         </AreaIKnow>

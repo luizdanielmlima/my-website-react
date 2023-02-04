@@ -1,19 +1,21 @@
 import React from 'react';
 import AboutMe from '../../components/AboutMe';
+import Footer from '../../components/Footer';
 import MainBanner from '../../components/MainBanner';
-import NavBar from '../../components/NavBar';
+import Header from '../../components/Header';
 import Portfolio from '../../components/Portfolio';
 import WhatIDo from '../../components/WhatIDo';
 
 const Home = () => {
   return (
-    <>
-      <NavBar></NavBar>
+    <div>
+      <Header />
       <MainBanner />
       <WhatIDo />
       <AboutMe />
       <Portfolio />
-    </>
+      <Footer />
+    </div>
   );
 };
 
