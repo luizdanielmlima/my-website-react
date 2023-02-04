@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { FaGithub, FaFilePdf } from 'react-icons/fa';
+
 const LinksWrapper = styled.div`
   position: absolute;
   right: 16px;
@@ -83,7 +85,8 @@ const NavBarLinks = () => {
             target="_blank"
             aria-label="link to CV, version 4"
           >
-            <i className="far fa-file-pdf mr-2"></i>CV
+            <FaFilePdf />
+            CV
           </Link>
         </LinksItem>
         <LinksItem>
@@ -91,7 +94,7 @@ const NavBarLinks = () => {
             href="https://github.com/luizdanielmlima"
             target="_blank"
           >
-            <i className="fab fa-github"></i>
+            <FaGithub />
           </Link>
         </LinksItem>
       </Links>
