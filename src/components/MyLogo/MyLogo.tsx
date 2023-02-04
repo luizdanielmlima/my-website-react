@@ -5,10 +5,6 @@ import styled from 'styled-components';
 const MyLogoContainer = styled.div`
   display: flex;
   align-items: center;
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translate(0, -50%);
   user-select: none;
 
   p {

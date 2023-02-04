@@ -10,7 +10,7 @@ import { portfolioCardsData } from './portfolioData';
 
 const Portfolio = () => {
   return (
-    <PortfolioSection>
+    <PortfolioSection id="portfolio">
       <PortfolioTitle>Portfolio</PortfolioTitle>
       <PortfolioContent>
         {portfolioCardsData.map((portfItem) => {

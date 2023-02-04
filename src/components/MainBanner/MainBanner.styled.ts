@@ -66,15 +66,16 @@ export const AreaJob = styled.div`
   font-size: 2em;
   color: ${({ theme }) => theme.colors.dark};
 `;
+
 export const AreaIKnow = styled.div`
   font-size: 1.2em;
-  color: ${({ theme }) => theme.colors.dark};
-  padding: 10px;
+  padding: 24px 10px;
   align-self: end;
   border-bottom: 5px dotted ${({ theme }) => theme.colors.dark};
 `;
 
-export const Abilities = styled.a`
+export const Abilities = styled.ul`
+  color: ${({ theme }) => theme.colors.dark};
   list-style: none;
   padding: 20px;
   align-self: end;
