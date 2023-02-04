@@ -16,6 +16,7 @@ const Portfolio = () => {
         {portfolioCardsData.map((portfItem) => {
           return (
             <PortfolioCard
+              key={portfItem.title}
               title={portfItem.title}
               type={portfItem.type}
               description={portfItem.description}
