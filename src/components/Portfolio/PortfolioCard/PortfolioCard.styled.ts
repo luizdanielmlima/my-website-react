@@ -4,9 +4,9 @@ export const PortfolioCardContainer = styled.div`
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 360px;
-  color: var(--bg-color);
-  background-color: var(--dark-color);
+  min-width: 380px;
+  color: ${({ theme }) => theme.colors.bg};
+  background-color: ${({ theme }) => theme.colors.dark};
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -16,18 +16,18 @@ export const PortfolioCardBody = styled.div`
   padding: 20px;
 `;
 
-export const PortfolioCardImgContainer = styled.a`
+export const PortfolioCardImgContainer = styled.div<{
+  hasLink: boolean;
+}>`
   .clickable-img {
     position: relative;
     margin: 0;
     padding: 0;
-    cursor: pointer;
+    cursor: ${(props) => (props.hasLink ? 'pointer' : 'auto')};
     display: inline-block;
     width: 100%;
     opacity: 1;
-    -webkit-transition: opacity 0.35s;
     transition: opacity 0.4s;
-    /* background-color: greenyellow; */
   }
 
   .clickable-img-raster {
@@ -38,7 +38,7 @@ export const PortfolioCardImgContainer = styled.a`
 
   .clickable-img-icon {
     z-index: 100;
-    color: white;
+    color: ${({ theme }) => theme.colors.dark};
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,19 +61,19 @@ export const PortfolioCardImgContainer = styled.a`
   }
 
   .clickable-img:hover {
-    opacity: 0.7;
+    opacity: ${(props) => (props.hasLink ? 0.7 : 1)};
   }
 
   .clickable-img:hover .clickable-img-icon-bg {
-    opacity: 0.3;
+    opacity: ${(props) => (props.hasLink ? 0.5 : 0)};
   }
 
   .clickable-img:hover .clickable-img-icon {
-    opacity: 0.7;
+    opacity: ${(props) => (props.hasLink ? 0.7 : 0)};
   }
 `;
 
-export const PortfolioIconsArea = styled.div`
+export const PortfolioCardHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -85,13 +85,22 @@ export const PortfolioIconsArea = styled.div`
   }
 `;
 
+export const PortfolioCardHeaderIcons = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  a:not(:first-child) {
+    margin-left: 8px;
+  }
+`;
+
 export const PortfolioTitleWrapper = styled.div`
   display: flex;
   align-items: center;
 
   p {
     margin: 0 4px;
-    color: var(--primary-color);
+    color: ${({ theme }) => theme.colors.primary};
     padding: 0;
   }
 
@@ -99,4 +108,8 @@ export const PortfolioTitleWrapper = styled.div`
     margin: 0;
     margin-right: 4px;
   }
+`;
+
+export const PortfolioCardDescription = styled.div`
+  line-height: 1.5rem;
 `;

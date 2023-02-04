@@ -6,18 +6,26 @@ import {
   PortfolioTitle,
 } from './Portfolio.styled';
 import PortfolioCard from './PortfolioCard';
+import { portfolioCardsData } from './portfolioData';
 
 const Portfolio = () => {
   return (
     <PortfolioSection>
       <PortfolioTitle>Portfolio</PortfolioTitle>
       <PortfolioContent>
-        <PortfolioCard
-          title="Moztra"
-          type="commercial"
-          description="An Angular 9 app that shows historical climate and carbon emissions data through an interactive map in an educational way. Built as Nth freelancer, no github available."
-          thumbUrl="portfolio_moztra_crop.png"
-        />
+        {portfolioCardsData.map((portfItem) => {
+          return (
+            <PortfolioCard
+              title={portfItem.title}
+              type={portfItem.type}
+              description={portfItem.description}
+              thumbUrl={portfItem.thumbUrl}
+              gitHubUrl={portfItem.gitHubUrl}
+              previewUrl={portfItem.previewUrl}
+              previewType={portfItem.previewType}
+            />
+          );
+        })}
       </PortfolioContent>
     </PortfolioSection>
   );

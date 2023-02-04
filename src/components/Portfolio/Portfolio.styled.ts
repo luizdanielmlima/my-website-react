@@ -12,9 +12,7 @@ export const PortfolioTitle = styled(SectionTitle)`
 `;
 
 export const PortfolioContent = styled.div`
-  .portfolio .pf-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 80px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 80px;
 `;
