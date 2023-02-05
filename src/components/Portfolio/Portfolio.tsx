@@ -24,6 +24,7 @@ const Portfolio = () => {
               gitHubUrl={portfItem.gitHubUrl}
               previewUrl={portfItem.previewUrl}
               previewType={portfItem.previewType}
+              youtubeVideoId={portfItem.youtubeVideoId}
             />
           );
         })}

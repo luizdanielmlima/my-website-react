@@ -6,6 +6,7 @@ export interface PortfolioCardModel {
   gitHubUrl?: string;
   previewUrl?: string;
   previewType?: 'externalUrl' | 'youtubeModal';
+  youtubeVideoId?: string;
 }
 
 export const portfolioCardsData: PortfolioCardModel[] = [
@@ -16,6 +17,7 @@ export const portfolioCardsData: PortfolioCardModel[] = [
       'An Angular app that shows historical climate and carbon emissions data through an interactive map in an educational way. Built as Nth freelancer, no github available.',
     thumbUrl: 'portfolio_moztra_crop.png',
     previewType: 'youtubeModal',
+    youtubeVideoId: 'https://www.youtube.com/embed/VSWYHQtCzmI',
   },
   {
     title: 'Movieviz (React)',

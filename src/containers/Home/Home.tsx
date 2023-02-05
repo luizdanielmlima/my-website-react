@@ -8,14 +8,14 @@ import WhatIDo from '../../components/WhatIDo';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
       <MainBanner />
       <WhatIDo />
       <AboutMe />
       <Portfolio />
       <Footer />
-    </div>
+    </>
   );
 };
 
