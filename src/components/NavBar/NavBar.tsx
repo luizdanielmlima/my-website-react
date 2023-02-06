@@ -4,22 +4,22 @@ import styled from 'styled-components';
 import { FaGithub, FaFilePdf } from 'react-icons/fa';
 
 const LinksWrapper = styled.div`
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  align-items: center;
   margin-left: auto;
 `;
 
 const Links = styled.ul`
+  list-style: none;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 const LinksItem = styled.li`
   display: inline-block;
   margin-left: 70px;
-  padding-top: 8px;
   position: relative;
 `;
 
@@ -28,6 +28,10 @@ const Link = styled.a`
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.5em;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
 
   &:hover {
     color: ${({ theme }) => theme.colors.bg};
@@ -40,7 +44,7 @@ const Link = styled.a`
     background-color: var(--bg-color);
 
     position: absolute;
-    top: 0;
+    top: -8px;
     width: 0%;
 
     transition: all ease-in-out 250ms;
@@ -82,7 +86,7 @@ const NavBar = () => {
             aria-label="link to CV, version 4"
           >
             <FaFilePdf />
-            CV
+            <p>CV</p>
           </Link>
         </LinksItem>
         <LinksItem>
