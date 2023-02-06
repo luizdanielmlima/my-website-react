@@ -1,101 +1,84 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { FaGithub, FaFilePdf } from 'react-icons/fa';
-
-const LinksWrapper = styled.div`
-  margin-left: auto;
-`;
-
-const Links = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-`;
-
-const LinksItem = styled.li`
-  display: inline-block;
-  margin-left: 70px;
-  position: relative;
-`;
-
-const Link = styled.a`
-  color: var(--primary-color);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.5em;
-
-  display: flex;
-  align-items: center;
-  gap: 4px;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.bg};
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: var(--bg-color);
-
-    position: absolute;
-    top: -8px;
-    width: 0%;
-
-    transition: all ease-in-out 250ms;
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-`;
+import {
+  ExternalLinkLabel,
+  LinkLabel,
+  Links,
+  LinksItem,
+  LinksWrapper,
+} from './NavBar.styled';
 
 const NavBar = () => {
   return (
     <LinksWrapper>
       <Links>
         <LinksItem>
-          <Link href="#banner" id="nav-home">
+          <LinkLabel
+            activeClass="active"
+            to="banner"
+            spy={true}
+            smooth={true}
+            offset={-20}
+            duration={500}
+          >
             Home
-          </Link>
+          </LinkLabel>
         </LinksItem>
         <LinksItem>
-          <Link href="#whatido" id="nav-whatido">
+          <LinkLabel
+            activeClass="active"
+            to="whatido"
+            spy={true}
+            smooth={true}
+            offset={-20}
+            duration={500}
+          >
             What I Do
-          </Link>
+          </LinkLabel>
         </LinksItem>
         <LinksItem>
-          <Link href="#about" id="nav-about">
+          <LinkLabel
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-20}
+            duration={500}
+          >
             About Me
-          </Link>
+          </LinkLabel>
         </LinksItem>
         <LinksItem>
-          <Link href="#portfolio" id="nav-portfolio">
+          <LinkLabel
+            activeClass="active"
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            offset={-20}
+            duration={500}
+          >
             Portfolio
-          </Link>
+          </LinkLabel>
         </LinksItem>
         <LinksItem>
-          <Link
+          <ExternalLinkLabel
             href="./assets/LuizDanielLima_FrontEndDev_CV-V04_eng.pdf"
             target="_blank"
-            aria-label="link to CV, version 4"
+            aria-label="link to pdf file, CV"
           >
             <FaFilePdf />
             <p>CV</p>
-          </Link>
+          </ExternalLinkLabel>
         </LinksItem>
         <LinksItem>
-          <Link
+          <ExternalLinkLabel
             href="https://github.com/luizdanielmlima"
             target="_blank"
+            aria-label="link to Github"
           >
             <FaGithub />
-          </Link>
+          </ExternalLinkLabel>
         </LinksItem>
       </Links>
     </LinksWrapper>

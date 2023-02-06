@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import {
   Abilities,
@@ -8,6 +9,7 @@ import {
   AreaJob,
   BannerArea,
   Box1,
+  LinkToMore,
   Name,
   Poster,
   VLine,
@@ -31,7 +33,16 @@ const MainBanner = () => {
             <li>angular</li>
             <li>ionic 4</li>
             <li>
-              <a href="#whatido">more...</a>
+              <LinkToMore
+                activeClass="active"
+                to="whatido"
+                spy={true}
+                smooth={true}
+                offset={-20}
+                duration={500}
+              >
+                more ...
+              </LinkToMore>
             </li>
           </Abilities>
         </AreaIKnow>
