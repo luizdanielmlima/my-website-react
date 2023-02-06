@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 export const BannerArea = styled.main`
@@ -79,4 +80,13 @@ export const Abilities = styled.ul`
   list-style: none;
   padding: 20px;
   align-self: end;
+`;
+
+export const LinkToMore = styled(Link)`
+  cursor: pointer !important;
+  color: ${({ theme }) => theme.colors.primary};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.tertiary};
+  }
 `;
