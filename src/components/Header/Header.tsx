@@ -42,7 +42,6 @@ const Header = () => {
   const isMobile = useMediaQuery(
     `(max-width: ${defaultBreakpoints['md']})`,
   );
-  console.log('isMobile: ', isMobile);
 
   const [navBarIsVisible, setNavBarIsVisible] = useState<boolean>();
 
