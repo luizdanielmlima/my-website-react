@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { FaGithub, FaFilePdf } from 'react-icons/fa';
 import {
@@ -9,7 +9,9 @@ import {
   LinksWrapper,
 } from './NavBar.styled';
 
-const NavBar = () => {
+const NavBar: FC<{ onLinkClicked: () => void }> = ({
+  onLinkClicked,
+}) => {
   return (
     <LinksWrapper>
       <Links>
@@ -21,6 +23,7 @@ const NavBar = () => {
             smooth={true}
             offset={-20}
             duration={500}
+            onClick={onLinkClicked}
           >
             Home
           </LinkLabel>
@@ -33,6 +36,7 @@ const NavBar = () => {
             smooth={true}
             offset={-20}
             duration={500}
+            onClick={onLinkClicked}
           >
             What I Do
           </LinkLabel>
@@ -45,6 +49,7 @@ const NavBar = () => {
             smooth={true}
             offset={-20}
             duration={500}
+            onClick={onLinkClicked}
           >
             About Me
           </LinkLabel>
@@ -57,6 +62,7 @@ const NavBar = () => {
             smooth={true}
             offset={-20}
             duration={500}
+            onClick={onLinkClicked}
           >
             Portfolio
           </LinkLabel>
