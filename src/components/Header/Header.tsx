@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
@@ -42,9 +42,9 @@ const Header = () => {
   const isMobile = useMediaQuery(
     `(max-width: ${defaultBreakpoints['md']})`,
   );
-  const [navBarIsVisible, setNavBarIsVisible] = useState<boolean>(
-    isMobile ? true : false,
-  );
+  console.log('isMobile: ', isMobile);
+
+  const [navBarIsVisible, setNavBarIsVisible] = useState<boolean>();
 
   const toggleNavBar = useCallback(() => {
     setNavBarIsVisible((prevState) => !prevState);
@@ -55,6 +55,10 @@ const Header = () => {
       setNavBarIsVisible(false);
     }
   };
+
+  useEffect(() => {
+    setNavBarIsVisible(!isMobile);
+  }, [isMobile]);
 
   return (
     <HeaderWrapper>
