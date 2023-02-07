@@ -55,6 +55,10 @@ export const Name = styled.h2`
   ${down('md')} {
     font-size: 2rem;
   }
+
+  ${down('sm')} {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Box1 = styled.div`
@@ -97,8 +101,11 @@ export const AreaJob = styled.div`
 
   ${down('md')} {
     padding: 5px 15px;
-    font-size: 1em;
-    color: var(--dark-color);
+    font-size: 1rem;
+  }
+
+  ${down('sm')} {
+    font-size: 0.8rem;
   }
 `;
 

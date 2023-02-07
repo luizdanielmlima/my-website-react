@@ -1,15 +1,20 @@
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 
 export const PortfolioCardContainer = styled.div`
   margin: 0;
   padding: 0;
   width: 100%;
-  min-width: 380px;
+  min-width: 360px;
   color: ${({ theme }) => theme.colors.bg};
   background-color: ${({ theme }) => theme.colors.dark};
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  ${down('sm')} {
+    min-width: 320px;
+  }
 `;
 
 export const PortfolioCardBody = styled.div`

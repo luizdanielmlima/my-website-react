@@ -1,3 +1,4 @@
+import { down } from 'styled-breakpoints';
 import styled from 'styled-components';
 import { Section, SectionTitle } from '../../App.styled';
 
@@ -22,6 +23,15 @@ export const AboutMeContent = styled.div`
   ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
+
+  ${down('md')} {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    line-height: 2.5;
+  }
 `;
 
 export const AboutItem = styled.div`
@@ -30,6 +40,10 @@ export const AboutItem = styled.div`
   h3 {
     margin-bottom: 20px;
     color: ${({ theme }) => theme.colors.primary};
+  }
+
+  ${down('md')} {
+    padding: 16px 8px;
   }
 `;
 
@@ -46,4 +60,10 @@ export const AboutItemDoubleInfo = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   align-items: center;
+
+  ${down('md')} {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
 `;
