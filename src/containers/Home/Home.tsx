@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import ReactGA from 'react-ga';
 
@@ -8,12 +8,11 @@ import MainBanner from '../../components/MainBanner';
 import Portfolio from '../../components/Portfolio';
 import WhatIDo from '../../components/WhatIDo';
 
-ReactGA.send({
-  hitType: 'pageview',
-  page: window.location.pathname,
-});
-
 const Home = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <>
       <MainBanner />
