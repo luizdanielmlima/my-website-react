@@ -13,7 +13,7 @@ export const PortfolioCardContainer = styled.div`
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   ${down('sm')} {
-    min-width: 320px;
+    min-width: 280px;
   }
 `;
 

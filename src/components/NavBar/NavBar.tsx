@@ -69,7 +69,7 @@ const NavBar: FC<{ onLinkClicked: () => void }> = ({
         </LinksItem>
         <LinksItem>
           <ExternalLinkLabel
-            href="./assets/LuizDanielLima_FrontEndDev_CV-V04_eng.pdf"
+            href="./assets/LuizDanielLima_FrontEndDev_CV-V05_eng.pdf"
             target="_blank"
             aria-label="link to pdf file, CV"
           >
