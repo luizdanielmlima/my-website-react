@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import './App.css';
 import Header from './components/Header';

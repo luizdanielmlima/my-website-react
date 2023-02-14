@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import { IconContext } from 'react-icons';
 import YoutubeEmbed from '../../YoutubeEmbed/YoutubeEmbed';
 import Modal from 'react-modal';
+import ReactGA from 'react-ga4';
 
 import { FaYoutube, FaEye, FaGithub } from 'react-icons/fa';
 import { PortfolioCardModel } from '../portfolioData';
@@ -49,6 +50,10 @@ const PortfolioCard: FC<PortfolioCardModel> = ({
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const handleClickCard = () => {
+    ReactGA.send({
+      hitType: 'selectContent',
+      contentType: `${title}`,
+    });
     if (youtubeVideoId) {
       openModal();
     }
