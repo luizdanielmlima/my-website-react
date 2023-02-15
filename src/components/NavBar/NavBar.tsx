@@ -9,7 +9,7 @@ import {
   LinksWrapper,
 } from './NavBar.styled';
 
-const NavBar: FC<{ onLinkClicked: () => void }> = ({
+const NavBar: FC<{ onLinkClicked: (label: string) => void }> = ({
   onLinkClicked,
 }) => {
   return (
@@ -23,7 +23,7 @@ const NavBar: FC<{ onLinkClicked: () => void }> = ({
             smooth={true}
             offset={-20}
             duration={500}
-            onClick={onLinkClicked}
+            onClick={() => onLinkClicked('main')}
           >
             Home
           </LinkLabel>
@@ -36,7 +36,7 @@ const NavBar: FC<{ onLinkClicked: () => void }> = ({
             smooth={true}
             offset={-20}
             duration={500}
-            onClick={onLinkClicked}
+            onClick={() => onLinkClicked('whatido')}
           >
             What I Do
           </LinkLabel>
@@ -49,7 +49,7 @@ const NavBar: FC<{ onLinkClicked: () => void }> = ({
             smooth={true}
             offset={-20}
             duration={500}
-            onClick={onLinkClicked}
+            onClick={() => onLinkClicked('about')}
           >
             About Me
           </LinkLabel>
@@ -62,7 +62,7 @@ const NavBar: FC<{ onLinkClicked: () => void }> = ({
             smooth={true}
             offset={-20}
             duration={500}
-            onClick={onLinkClicked}
+            onClick={() => onLinkClicked('portfolio')}
           >
             Portfolio
           </LinkLabel>
@@ -72,6 +72,7 @@ const NavBar: FC<{ onLinkClicked: () => void }> = ({
             href="./assets/LuizDanielLima_FrontEndDev_CV-V05_eng.pdf"
             target="_blank"
             aria-label="link to pdf file, CV"
+            onClick={() => onLinkClicked('cv')}
           >
             <FaFilePdf />
             <p>CV</p>
@@ -82,6 +83,7 @@ const NavBar: FC<{ onLinkClicked: () => void }> = ({
             href="https://github.com/luizdanielmlima"
             target="_blank"
             aria-label="link to Github"
+            onClick={() => onLinkClicked('github')}
           >
             <FaGithub />
           </ExternalLinkLabel>

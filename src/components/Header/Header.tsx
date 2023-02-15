@@ -3,6 +3,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
+import ReactGA from 'react-ga4';
 
 import MyLogo from '../MyLogo';
 import NavBar from '../NavBar';
@@ -49,7 +50,12 @@ const Header = () => {
     setNavBarIsVisible((prevState) => !prevState);
   }, [setNavBarIsVisible]);
 
-  const handleLinkClicked = () => {
+  const handleLinkClicked = (linkLabel: string) => {
+    ReactGA.event({
+      category: 'navbar',
+      action: 'click menu item',
+      label: `${linkLabel}`,
+    });
     if (isMobile) {
       setNavBarIsVisible(false);
     }
@@ -63,7 +69,9 @@ const Header = () => {
     <HeaderWrapper>
       <MyLogo />
       {navBarIsVisible && (
-        <NavBar onLinkClicked={() => handleLinkClicked()} />
+        <NavBar
+          onLinkClicked={(label: string) => handleLinkClicked(label)}
+        />
       )}
       {isMobile && (
         <Toggle>

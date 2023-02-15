@@ -50,9 +50,10 @@ const PortfolioCard: FC<PortfolioCardModel> = ({
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const handleClickCard = () => {
-    ReactGA.send({
-      hitType: 'selectContent',
-      contentType: `${title}`,
+    ReactGA.event({
+      category: 'portfolio',
+      action: 'view portfolio item',
+      label: `${title}`,
     });
     if (youtubeVideoId) {
       openModal();
