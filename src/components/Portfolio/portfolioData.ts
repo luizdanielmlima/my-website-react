@@ -14,7 +14,7 @@ export const portfolioCardsData: PortfolioCardModel[] = [
     title: 'Moztra',
     type: 'commercial',
     description:
-      'An Angular app that shows historical climate and carbon emissions data through an interactive map in an educational way. Built as Nth freelancer, no github available.',
+      'An Angular app to create interactive presentations (content management system)',
     thumbUrl: 'portfolio_moztra_crop.png',
     previewType: 'youtubeModal',
     youtubeVideoId: 'https://www.youtube.com/embed/VSWYHQtCzmI',
@@ -33,14 +33,14 @@ export const portfolioCardsData: PortfolioCardModel[] = [
     title: 'Logrock',
     type: 'commercial',
     description:
-      'A Next.js web application focused on helping truck companies manage all things related to compliance.Built as Logrock employee, no github available.',
+      'A Next.js web application focused on helping truck companies manage all things related to compliance. Built as a Logrock employee, no github available.',
     thumbUrl: 'portf_logrock_crop.png',
   },
   {
     title: 'First Key Homes',
     type: 'commercial',
     description:
-      'An internal web app application used by FKH employees to evaluate real state assets, built with React.Built as GFT employee, no github available.',
+      'An internal web app application used by FKH employees to evaluate real state assets, built with React. Built as GFT employee, no github available.',
     thumbUrl: 'portf_fkh_crop.png',
   },
   {
@@ -61,7 +61,7 @@ export const portfolioCardsData: PortfolioCardModel[] = [
     title: 'WEMC',
     type: 'commercial',
     description:
-      'An Angular 9 app that shows historical climate and carbon emissions data through an interactive map in an educational way.',
+      'An Angular 9 app that shows historical climate and carbon emissions data through an interactive map in an educational way. Built as Nth freelancer, no github available.',
     thumbUrl: 'portf_wemc_crop.png',
     previewUrl: 'https://tealtool.earth/',
     previewType: 'externalUrl',
